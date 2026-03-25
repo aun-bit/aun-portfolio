@@ -4,35 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Aun Mustansar Hussain</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="DSC_0810.JPG" type="image/jpg">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #e3f2fd, #ffffff);
+            animation: fadeIn 1.5s ease-in;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .container {
             width: 80%;
             margin: auto;
             background: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+            animation: slideUp 1s ease;
         }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         .header {
             text-align: center;
         }
+
         .header img {
             width: 150px;
             border-radius: 50%;
+            border: 4px solid #007BFF;
+            transition: transform 0.3s;
         }
-        h1, h2 {
+
+        .header img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
             color: #333;
         }
-        .section {
-            margin-top: 20px;
+
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
         }
+
+        .section {
+            margin-top: 25px;
+            animation: fadeIn 2s ease;
+        }
+
         ul {
             padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .icon {
+            color: #007BFF;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -43,19 +101,19 @@
     <div class="header">
         <img src="DSC_0810.JPG" alt="Profile Photo">
         <h1>Aun Mustansar Hussain</h1>
-        <p><strong>Professional Title:</strong> Data Scientist / AI Researcher</p>
+        <p><strong>Data Scientist / AI Researcher</strong></p>
     </div>
 
     <div class="section">
         <h2>About Me</h2>
-        <p>I am a motivated and dedicated individual with a strong interest in Artificial Intelligence, Machine Learning, and research. I aim to solve real-world problems using modern technologies.</p>
+        <p>I am a motivated and dedicated individual with a strong interest in Artificial Intelligence, Machine Learning, and Data Science. I aim to solve real-world problems using modern technologies and research-based solutions.</p>
     </div>
 
     <div class="section">
         <h2>Education</h2>
         <ul>
-            <li><strong>MS in Artificial Intelligence</strong> - (Your University) (2024 - 2026)</li>
-            <li><strong>Bachelor's Degree</strong> - (Your University) (2020 - 2024)</li>
+            <li><strong>MS in Data Science</strong> - Superior University Lahore (2024 - 2026)</li>
+            <li><strong>Bachelor's in Computer Science</strong> - Comsats University Islamabad (2020 - 2024)</li>
         </ul>
     </div>
 
@@ -98,9 +156,13 @@
     <div class="section">
         <h2>Contact Information</h2>
         <ul>
-            <li>Email: your@email.com</li>
-            <li>Phone: +92-XXXXXXXXXX</li>
-            <li>Location: Pakistan</li>
+            <li><i class="fa-solid fa-envelope icon"></i>Email: aounmustansar@email.com</li>
+            <li><i class="fa-solid fa-phone icon"></i>Phone: +92-3212514017</li>
+            <li><i class="fa-solid fa-location-dot icon"></i>Location: Lahore, Pakistan</li>
+            <li><i class="fa-brands fa-linkedin icon"></i>
+                <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank">
+                LinkedIn Profile</a>
+            </li>
         </ul>
     </div>
 
