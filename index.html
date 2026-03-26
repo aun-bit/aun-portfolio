@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Aun Mustansar Hussain | Portfolio</title>
   <meta name="description" content="Modern animated portfolio website" />
   <style>
@@ -380,40 +381,48 @@
     }
 
     /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
 
-    .skill-card {
-      padding: 30px 24px;
-      text-align: center;
-      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
-    }
+.skill-card {
+  padding: 30px 22px;
+  text-align: center;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .skill-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(140, 128, 255, .5);
-      box-shadow: 0 18px 35px rgba(8, 6, 36, .45);
-    }
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(140, 128, 255, .55);
+  box-shadow: 0 18px 35px rgba(8, 6, 36, .45);
+  background: rgba(24, 18, 75, 0.95);
+}
 
-    .skill-icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-      color: #8d7eff;
-    }
+.skill-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #8d7eff;
+  line-height: 1;
+  filter: drop-shadow(0 0 12px rgba(123, 97, 255, 0.35));
+}
 
-    .skill-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
 
-    .skill-card p {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: .95rem;
-    }
+.skill-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: .95rem;
+}
 
     /* Experience */
     .timeline {
@@ -689,7 +698,6 @@
 
         <div class="btn-row">
           <a href="#contact" class="btn btn-primary">Hire Me</a>
-          <a href="#" class="btn btn-secondary" onclick="downloadCV()">Download CV</a>
         </div>
       </div>
 
@@ -718,62 +726,62 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title reveal">Technical Arsenal</h2>
-      <div class="title-line reveal"></div>
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title reveal">Technical Arsenal</h2>
+    <div class="title-line reveal"></div>
 
-      <div class="skills-grid">
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">💻</div>
-          <h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript, React, Next.js, Tailwind CSS</p>
-        </div>
+    <div class="skills-grid">
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, Basic React, Responsive Design</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">⚙️</div>
-          <h3>Backend</h3>
-          <p>Node.js, Express.js, APIs, Authentication, Database Integration</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-server"></i></div>
+        <h3>Backend</h3>
+        <p>Python, Flask (basic), APIs, Data Processing</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">🗄️</div>
-          <h3>Databases</h3>
-          <p>MongoDB, MySQL, PostgreSQL, Firebase</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-database"></i></div>
+        <h3>Databases</h3>
+        <p>MySQL, MongoDB (basic), Data Handling</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">🎨</div>
-          <h3>Design Tools</h3>
-          <p>Figma, Canva, Responsive Design, UI Components</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+        <h3>Data Science / AI</h3>
+        <p>Machine Learning, Deep Learning, Computer Vision, Model Training</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">☁️</div>
-          <h3>Cloud & DevOps</h3>
-          <p>AWS, Vercel, Netlify, GitHub Actions, Deployment</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Tools & Platforms</h3>
+        <p>Git, GitHub, VS Code, Jupyter Notebook, Google Colab</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">🛠️</div>
-          <h3>Tools</h3>
-          <p>Git, GitHub, VS Code, Postman, npm, Chrome DevTools</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Data Analysis</h3>
+        <p>NumPy, Pandas, Matplotlib, Data Cleaning, Visualization</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">📱</div>
-          <h3>Responsive UI</h3>
-          <p>Mobile-first layouts, animations, transitions, accessibility basics</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+        <h3>Core Skills</h3>
+        <p>Problem Solving, Logical Thinking, Research Skills</p>
+      </div>
 
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">🚀</div>
-          <h3>Other Skills</h3>
-          <p>You can replace this later with your custom technologies and expertise</p>
-        </div>
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Other Skills</h3>
+        <p>Fast Learner, Teamwork, Project Development</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Experience -->
   <section id="experience">
@@ -948,10 +956,6 @@
 
     reveals.forEach(el => observer.observe(el));
 
-    // Fake CV Download
-    function downloadCV() {
-      alert("Replace this button with your real CV file link later.");
-    }
 
     // Contact Form Action
     function sendMessage(e) {
