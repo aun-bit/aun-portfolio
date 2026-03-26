@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aun Mustansar Hussain | Portfolio</title>
+<title>Portfolio - Aun Mustansar Hussain</title>
 <link rel="icon" href="DSC_0810.JPG">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -11,83 +11,84 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #0b0f2f;
-    color: white;
+    background: #c7e36b;
 }
 
-/* NAVBAR */
-nav {
+.wrapper {
+    width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TOP SECTION */
+.top {
+    background: #7ec8e3;
+    padding: 30px;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background: rgba(255,255,255,0.05);
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 80px 60px;
+    gap: 20px;
 }
 
-.hero img {
-    width: 220px;
-    border-radius: 20px;
+.top img {
+    width: 140px;
+    border-radius: 10px;
 }
 
-.hero h1 span {
-    color: #7c8cff;
+.intro h1 {
+    margin: 5px 0;
 }
 
-.btn {
-    padding: 10px 20px;
-    background: #7c8cff;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
+.tag {
+    background: white;
     display: inline-block;
-    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-.section {
-    padding: 60px;
-    text-align: center;
+/* MAIN GRID */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 25px;
 }
 
 .card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 12px;
-    margin: 15px;
-}
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* CONTACT */
-.contact input, .contact textarea {
-    width: 80%;
-    margin: 10px;
-    padding: 12px;
+    background: #f9f9f9;
+    padding: 15px;
     border-radius: 10px;
-    border: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    opacity: 0.7;
+h3 {
+    margin-top: 0;
+    background: #c7e36b;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+li {
+    margin: 6px 0;
+}
+
+/* ICON LINKS */
+.icons a {
+    font-size: 18px;
+    margin-right: 10px;
+    color: black;
+}
+
+.icons a:hover {
+    color: #0077b5;
 }
 
 </style>
@@ -95,79 +96,73 @@ nav a {
 
 <body>
 
-<!-- NAV -->
-<nav>
-    <h3>Aun Mustansar</h3>
-    <div>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<div class="wrapper">
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Hi, I'm <span>Aun Mustansar</span></h1>
-        <p>Data Scientist | AI Researcher</p>
-        <p>Passionate about solving real-world problems using AI & Data Science.</p>
+    <!-- TOP -->
+    <div class="top">
+        <img src="DSC_0810.JPG">
+        <div class="intro">
+            <div class="tag">Hello</div>
+            <h1>I'm Aun Mustansar Hussain</h1>
+            <p>Data Scientist / AI Researcher</p>
 
-        <a href="mailto:aounmustansar@email.com" class="btn">Hire Me</a>
-    </div>
-
-    <img src="DSC_0810.JPG" alt="Profile">
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-    <h2>About Me</h2>
-    <p>I am a results-driven Data Science student with expertise in Machine Learning and AI. I enjoy building intelligent systems and solving complex problems.</p>
-</section>
-
-<!-- SKILLS -->
-<section class="section" id="skills">
-    <h2>Technical Skills</h2>
-    <div class="grid">
-        <div class="card">Python</div>
-        <div class="card">Machine Learning</div>
-        <div class="card">Deep Learning</div>
-        <div class="card">Computer Vision</div>
-        <div class="card">TensorFlow / PyTorch</div>
-        <div class="card">Git & GitHub</div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Plant Disease Detection</h3>
-            <p>Vision Transformer model for crop disease detection.</p>
+            <div class="icons">
+                <a href="mailto:aounmustansar@email.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+923212514017"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://maps.google.com/?q=Lahore,Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-    <h2>Contact</h2>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea><br>
-    <a href="mailto:aounmustansar@email.com" class="btn">Send</a>
+    <!-- CONTENT -->
+    <div class="content">
 
-    <div style="margin-top:20px;">
-        <a href="mailto:aounmustansar@email.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="tel:+923212514017"><i class="fa-solid fa-phone"></i></a>
-        <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <!-- LEFT -->
+        <div>
+            <div class="card">
+                <h3>Contact</h3>
+                <p>Lahore, Pakistan</p>
+                <p>aounmustansar@email.com</p>
+                <p>+92-3212514017</p>
+            </div>
+
+            <div class="card">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Computer Vision</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+            <div class="card">
+                <h3>Education</h3>
+                <p><strong>MS in Data Science</strong><br>Superior University Lahore (2024 - 2026)</p>
+                <p><strong>BS Computer Science</strong><br>Comsats University Islamabad (2020 - 2024)</p>
+            </div>
+
+            <div class="card">
+                <h3>Projects</h3>
+                <p><strong>Plant Disease Detection</strong><br>Vision Transformer (ViT), PlantVillage Dataset</p>
+            </div>
+
+            <div class="card">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>MS Research Project Completed</li>
+                    <li>Strong Academic Record</li>
+                    <li>Technical Participation</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-</section>
 
-<!-- FOOTER -->
-<div class="footer">
-    © 2026 Aun Mustansar Hussain
 </div>
 
 </body>
