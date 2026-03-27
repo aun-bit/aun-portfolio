@@ -126,6 +126,20 @@
       font-size: 1.3rem;
       color: var(--accent2);
       margin-bottom: 15px;
+      min-height: 35px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .role span {
+      border-right: 2px solid var(--accent);
+      padding-right: 5px;
+      animation: blink 0.8s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% { border-color: var(--accent); }
+      50% { border-color: transparent; }
     }
     
     .hero-text {
@@ -493,7 +507,7 @@
         <div class="hero-content reveal">
           <div class="badge">Open to Internships</div>
           <h1>Hi, I'm <span>Aun Mustansar Hussain</span></h1>
-          <div class="role">ML Engineer & Data Scientist</div>
+          <div class="role" id="typingText"></div>
           <p class="hero-text">
             Aspiring AI Engineer building smart, data-driven solutions using Machine Learning and modern technologies. Currently pursuing MS in Data Science.
           </p>
@@ -708,6 +722,34 @@
       });
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
+
+    // Typing Animation
+    const typingText = document.getElementById("typingText");
+    const roles = ["ML Engineer", "Data Scientist", "AI Developer", "Problem Solver", "Neural Network Developer", "Python Developer"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeRole() {
+      const currentRole = roles[roleIndex];
+      
+      if (!isDeleting) {
+        typingText.innerHTML = "<span>" + currentRole.slice(0, charIndex++) + "</span>";
+        if (charIndex > currentRole.length) {
+          isDeleting = true;
+          setTimeout(typeRole, 2000);
+          return;
+        }
+      } else {
+        typingText.innerHTML = "<span>" + currentRole.slice(0, charIndex--) + "</span>";
+        if (charIndex < 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      setTimeout(typeRole, isDeleting ? 50 : 100);
+    }
+    typeRole();
 
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.querySelector(".nav-links");
