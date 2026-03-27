@@ -65,6 +65,7 @@
       margin: 0 auto;
     }
 
+    /* Animated star background */
     .stars,
     .stars::before,
     .stars::after {
@@ -103,6 +104,7 @@
       to { transform: translateY(-300px); }
     }
 
+    /* Navbar */
     .navbar-wrap {
       position: sticky;
       top: 18px;
@@ -180,6 +182,7 @@
       cursor: pointer;
     }
 
+    /* General */
     section {
       padding: 95px 0;
       position: relative;
@@ -249,6 +252,7 @@
       background: rgba(255,255,255,.06);
     }
 
+    /* Hero */
     .hero {
       min-height: calc(100vh - 110px);
       display: flex;
@@ -375,6 +379,7 @@
       to { transform: rotate(0deg); }
     }
 
+    /* About */
     .about-card {
       max-width: 860px;
       margin: 0 auto;
@@ -388,49 +393,51 @@
       font-size: 1.03rem;
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
+    /* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
 
-    .skill-card {
-      padding: 30px 22px;
-      text-align: center;
-      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.skill-card {
+  padding: 30px 22px;
+  text-align: center;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .skill-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      border-color: rgba(140, 128, 255, .55);
-      box-shadow: 0 18px 35px rgba(8, 6, 36, .45);
-      background: rgba(24, 18, 75, 0.95);
-    }
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(140, 128, 255, .55);
+  box-shadow: 0 18px 35px rgba(8, 6, 36, .45);
+  background: rgba(24, 18, 75, 0.95);
+}
 
-    .skill-icon {
-      font-size: 2.4rem;
-      margin-bottom: 16px;
-      color: #8d7eff;
-      line-height: 1;
-      filter: drop-shadow(0 0 12px rgba(123, 97, 255, 0.35));
-    }
+.skill-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #8d7eff;
+  line-height: 1;
+  filter: drop-shadow(0 0 12px rgba(123, 97, 255, 0.35));
+}
 
-    .skill-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-      color: #ffffff;
-    }
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
 
-    .skill-card p {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: .95rem;
-    }
+.skill-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: .95rem;
+}
 
+    /* Experience */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -462,6 +469,7 @@
       font-size: .96rem;
     }
 
+    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -514,6 +522,7 @@
       color: #bfaeff;
     }
 
+    /* Contact */
     .contact-wrap {
       max-width: 680px;
       margin: 0 auto;
@@ -554,90 +563,91 @@
       resize: vertical;
     }
 
-    .contact-section-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: start;
-    }
+.contact-section-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
 
-    .contact-heading-box {
-      padding: 28px;
-      margin-bottom: 22px;
-    }
+.contact-heading-box {
+  padding: 28px;
+  margin-bottom: 22px;
+}
 
-    .contact-heading-box h3 {
-      font-size: 2rem;
-      margin-bottom: 12px;
-      color: #ffffff;
-    }
+.contact-heading-box h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
 
-    .contact-heading-box p {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 1rem;
-    }
+.contact-heading-box p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
 
-    .contact-info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
 
-    .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 22px 18px;
-      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
-    }
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 18px;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
 
-    .contact-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(140, 128, 255, .5);
-      box-shadow: 0 18px 35px rgba(8, 6, 36, .45);
-    }
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(140, 128, 255, .5);
+  box-shadow: 0 18px 35px rgba(8, 6, 36, .45);
+}
 
-    .contact-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      font-size: 1.4rem;
-      background: linear-gradient(135deg, rgba(123,97,255,.25), rgba(255,123,213,.18));
-      box-shadow: 0 6px 18px rgba(123, 97, 255, .22);
-      flex-shrink: 0;
-      color: #fff;
-    }
+.contact-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  background: linear-gradient(135deg, rgba(123,97,255,.25), rgba(255,123,213,.18));
+  box-shadow: 0 6px 18px rgba(123, 97, 255, .22);
+  flex-shrink: 0;
+  color: #fff;
+}
 
-    .contact-card h4 {
-      font-size: 1rem;
-      margin-bottom: 4px;
-      color: #fff;
-    }
+.contact-card h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #fff;
+}
 
-    .contact-card p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      word-break: break-word;
-    }
+.contact-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  word-break: break-word;
+}
 
-    .contact-form-box {
-      padding: 28px;
-    }
+.contact-form-box {
+  padding: 28px;
+}
 
-    @media (max-width: 980px) {
-      .contact-section-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+@media (max-width: 980px) {
+  .contact-section-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-    @media (max-width: 640px) {
-      .contact-info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+@media (max-width: 640px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    /* Footer */
     footer {
       padding: 28px 0 40px;
       text-align: center;
@@ -669,6 +679,7 @@
       opacity: 1;
     }
 
+    /* Reveal Animation */
     .reveal {
       opacity: 0;
       transform: translateY(35px);
@@ -680,6 +691,7 @@
       transform: translateY(0);
     }
 
+    /* Responsive */
     @media (max-width: 980px) {
       .hero-grid,
       .projects-grid,
@@ -753,10 +765,13 @@
 <body>
   <div class="stars"></div>
 
+  <!-- Navbar -->
   <div class="navbar-wrap">
     <nav class="navbar">
       <a href="#home" class="brand">Aun Mustansar Hussain</a>
+
       <button class="menu-btn" id="menuBtn">☰</button>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -768,6 +783,7 @@
     </nav>
   </div>
 
+  <!-- Hero -->
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-content reveal">
@@ -776,18 +792,21 @@
         <p>
           Aspiring AI Engineer building smart, data-driven solutions using Machine Learning and modern technologies.
         </p>
+
         <div class="btn-row">
           <a href="#contact" class="btn btn-primary">Hire Me</a>
         </div>
       </div>
+
       <div class="hero-visual reveal">
         <div class="orb-card">
-          <img src="DSC_0810.JPG" alt="Aun Mustansar Hussain" class="profile-img">
+          <img src="{{ url_for('static', filename='DSC_0810.JPG') }}" alt="Aun Mustansar Hussain" class="profile-img">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- About -->
   <section id="about">
     <div class="container">
       <h2 class="section-title reveal">About Me</h2>
@@ -803,82 +822,97 @@
     </div>
   </section>
 
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title reveal">Technical Arsenal</h2>
-      <div class="title-line reveal"></div>
-      <div class="skills-grid">
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript, Basic React, Responsive Design</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-server"></i></div>
-          <h3>Backend</h3>
-          <p>Python, Flask (basic), APIs, Data Processing</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-database"></i></div>
-          <h3>Databases</h3>
-          <p>MySQL, MongoDB (basic), Data Handling</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-robot"></i></div>
-          <h3>Data Science / AI</h3>
-          <p>Machine Learning, Deep Learning, Computer Vision, Model Training</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Data Analysis</h3>
-          <p>NumPy, Pandas, Matplotlib, Data Cleaning, Visualization</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-          <h3>Tools & Platforms</h3>
-          <p>Git, GitHub, VS Code, Jupyter Notebook, Google Colab</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-brain"></i></div>
-          <h3>Core Skills</h3>
-          <p>Problem Solving, Logical Thinking, Research Skills</p>
-        </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon"><i class="fas fa-rocket"></i></div>
-          <h3>Other Skills</h3>
-          <p>Fast Learner, Teamwork, Project Development</p>
-        </div>
+  <!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title reveal">Technical Arsenal</h2>
+    <div class="title-line reveal"></div>
+
+    <div class="skills-grid">
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, Basic React, Responsive Design</p>
+      </div>
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-server"></i></div>
+        <h3>Backend</h3>
+        <p>Python, Flask (basic), APIs, Data Processing</p>
+      </div>
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-database"></i></div>
+        <h3>Databases</h3>
+        <p>MySQL, MongoDB (basic), Data Handling</p>
+      </div>
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+        <h3>Data Science / AI</h3>
+        <p>Machine Learning, Deep Learning, Computer Vision, Model Training</p>
+      </div>
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Data Analysis</h3>
+        <p>NumPy, Pandas, Matplotlib, Data Cleaning, Visualization</p>
+      </div>
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Tools & Platforms</h3>
+        <p>Git, GitHub, VS Code, Jupyter Notebook, Google Colab</p>
+      </div>
+
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+        <h3>Core Skills</h3>
+        <p>Problem Solving, Logical Thinking, Research Skills</p>
+      </div>
+
+      <div class="skill-card glass-card reveal">
+        <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Other Skills</h3>
+        <p>Fast Learner, Teamwork, Project Development</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="experience">
-    <div class="container">
-      <h2 class="section-title reveal">Professional Journey</h2>
-      <div class="title-line reveal"></div>
-      <div class="timeline">
-        <div class="timeline-item glass-card reveal">
-          <h3>Master's Degree / Data Science</h3>
-          <div class="timeline-meta">Superior University | 2025 - 2027</div>
-          <p>
-            Focused on advanced data science concepts, machine learning, analytics, and AI-driven problem solving.
-          </p>
-        </div>
-        <div class="timeline-item glass-card reveal">
-          <h3>Internship / PHP Developer</h3>
-          <div class="timeline-meta">Blue Horn Technologies | 2025</div>
-          <p>
-            Worked on web development tasks using PHP, improved backend functionality, and supported real-world project development.
-          </p>
-        </div>
+  <!-- Experience -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title reveal">Professional Journey</h2>
+    <div class="title-line reveal"></div>
+
+    <div class="timeline">
+      <div class="timeline-item glass-card reveal">
+        <h3>Master's Degree / Data Science</h3>
+        <div class="timeline-meta">Superior University | 2025 - 2027</div>
+        <p>
+          Focused on advanced data science concepts, machine learning, analytics, and AI-driven problem solving.
+        </p>
+      </div>
+
+      <div class="timeline-item glass-card reveal">
+        <h3>Internship / PHP Developer</h3>
+        <div class="timeline-meta">Blue Horn Technologies | 2025</div>
+        <p>
+          Worked on web development tasks using PHP, improved backend functionality, and supported real-world project development.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+  <!-- Projects -->
   <section id="projects">
     <div class="container">
       <h2 class="section-title reveal">Featured Projects</h2>
       <div class="title-line reveal"></div>
+
       <div class="projects-grid">
         <div class="project-card glass-card reveal">
           <div class="project-icon"><i class="fas fa-microscope"></i></div>
@@ -891,6 +925,7 @@
             <a href="https://github.com/aun-bit/skin-cancer-detection-cnn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
           </div>
         </div>
+
         <div class="project-card glass-card reveal">
           <div class="project-icon"><i class="fas fa-seedling"></i></div>
           <h3>Soil–Crop Recommendation Using CAE</h3>
@@ -902,6 +937,7 @@
             <a href="https://github.com/aun-bit/soil-crop-recommendation" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
           </div>
         </div>
+
         <div class="project-card glass-card reveal">
           <div class="project-icon"><i class="fas fa-chart-pie"></i></div>
           <h3>Telecom Customer Churn Prediction</h3>
@@ -917,84 +953,93 @@
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title reveal">Contact</h2>
-      <div class="title-line reveal"></div>
-      <div class="contact-section-grid">
-        <div class="contact-left">
-          <div class="contact-heading-box glass-card reveal">
-            <h3>Let's Connect</h3>
-            <p>
-              Feel free to reach out for collaboration, internships, freelance work,
-              or to discuss AI, machine learning, and web development opportunities.
-            </p>
-          </div>
-          <div class="contact-info-grid">
-            <a href="mailto:aounmustansar@gmail.com" class="contact-card glass-card reveal">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <h4>Email</h4>
-                <p>aounmustansar@gmail.com</p>
-              </div>
-            </a>
-            <a href="tel:+923212514017" class="contact-card glass-card reveal">
-              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-              <div>
-                <h4>Phone</h4>
-                <p>+92 321 2514017</p>
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank" rel="noopener noreferrer" class="contact-card glass-card reveal">
-              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-              <div>
-                <h4>LinkedIn</h4>
-                <p>aun-mustansar-hussain</p>
-              </div>
-            </a>
-            <a href="https://github.com/aun-bit" target="_blank" rel="noopener noreferrer" class="contact-card glass-card reveal">
-              <div class="contact-icon"><i class="fab fa-github"></i></div>
-              <div>
-                <h4>GitHub</h4>
-                <p>@aun-bit</p>
-              </div>
-            </a>
-            <div class="contact-card glass-card reveal">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <h4>Location</h4>
-                <p>Lahore, Pakistan</p>
-              </div>
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title reveal">Contact</h2>
+    <div class="title-line reveal"></div>
+
+    <div class="contact-section-grid">
+      <div class="contact-left">
+        <div class="contact-heading-box glass-card reveal">
+          <h3>Let's Connect</h3>
+          <p>
+            Feel free to reach out for collaboration, internships, freelance work,
+            or to discuss AI, machine learning, and web development opportunities.
+          </p>
+        </div>
+
+        <div class="contact-info-grid">
+          <a href="mailto:aounmustansar@gmail.com" class="contact-card glass-card reveal">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>aounmustansar@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+923212514017" class="contact-card glass-card reveal">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+92 321 2514017</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank" rel="noopener noreferrer" class="contact-card glass-card reveal">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p>aun-mustansar-hussain</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/aun-bit" target="_blank" rel="noopener noreferrer" class="contact-card glass-card reveal">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <p>@aun-bit</p>
+            </div>
+          </a>
+
+          <div class="contact-card glass-card reveal">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>Lahore, Pakistan</p>
             </div>
           </div>
         </div>
-        <div class="contact-right">
-          <div class="contact-form-box glass-card reveal">
-            <form class="contact-form" id="contactForm">
-              <input type="text" id="name" placeholder="Your Name" required />
-              <input type="email" id="email" placeholder="Your Email" required />
-              <textarea id="message" placeholder="Your Message" required></textarea>
-              <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
-            </form>
-            <div id="formStatus" style="display: none; margin-top: 16px; padding: 12px; border-radius: 12px; text-align: center;"></div>
-          </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-form-box glass-card reveal">
+          <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+          </form>
+          <div id="formStatus" style="display: none; margin-top: 16px; padding: 12px; border-radius: 12px; text-align: center;"></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="footer-line"></div>
-    <p>© 2026 Aun Mustansar Hussain</p>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/aun-bit" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="mailto:aounmustansar@gmail.com">Email</a>
-      <a href="tel:+923212514017">Phone</a>
-    </div>
-  </footer>
+<footer>
+  <div class="footer-line"></div>
+  <p>© 2026 Aun Mustansar Hussain</p>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/aun-mustansar-hussain-71a793317" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/aun-bit" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="mailto:aounmustansar@gmail.com">Email</a>
+    <a href="tel:+923212514017">Phone</a>
+  </div>
+</footer>
 
   <script>
+    // Mobile Menu
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
 
@@ -1008,6 +1053,7 @@
       });
     });
 
+    // Typing Animation
     const typingElement = document.getElementById("typingText");
     const roles = [
       "ML Engineer",
@@ -1042,6 +1088,7 @@
 
     typeEffect();
 
+    // Reveal on Scroll
     const reveals = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver((entries) => {
@@ -1054,6 +1101,7 @@
 
     reveals.forEach(el => observer.observe(el));
 
+    // Contact Form Handler
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
     const submitBtn = document.getElementById("submitBtn");
