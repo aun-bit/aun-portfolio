@@ -210,10 +210,6 @@
       background: linear-gradient(90deg, #9fd4ff, #7b61ff, #ff7bd5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: textGlow 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 10px rgba(123, 97, 255, 0.5));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       letter-spacing: 0.3px;
     }
 
@@ -228,15 +224,13 @@
       font-size: 0.95rem;
       color: #f3f4ff;
       opacity: .9;
-      transition: .25s ease, text-shadow .25s ease;
+      transition: .25s ease;
       position: relative;
-      text-shadow: 0 0 0 transparent;
     }
 
     .nav-links a:hover {
       color: #ffffff;
       opacity: 1;
-      text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
     }
 
     .nav-links a::after {
@@ -393,8 +387,6 @@
       background: linear-gradient(90deg, #ffffff, #b88cff, #ff7bd5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: textGlow 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(123, 97, 255, 0.6));
     }
 
     .typing {
