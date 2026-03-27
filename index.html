@@ -82,6 +82,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     .bg-glow {
@@ -89,9 +90,9 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.3;
-      z-index: -1;
+      filter: blur(120px);
+      opacity: 0.4;
+      z-index: -2;
       animation: float 8s ease-in-out infinite;
     }
 
@@ -114,6 +115,190 @@
       transform: translateX(-50%);
       background: var(--accent-3);
       animation-delay: -2s;
+    }
+
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: particleFloat 15s linear infinite;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .particle:nth-child(odd) {
+      background: var(--accent-2);
+      box-shadow: 0 0 10px var(--accent-2);
+    }
+
+    .particle:nth-child(3n) {
+      background: var(--accent-3);
+      box-shadow: 0 0 10px var(--accent-3);
+    }
+
+    @keyframes particleFloat {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.6;
+      }
+      90% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    .grid-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(135deg, transparent 40%, rgba(0, 212, 255, 0.02) 50%, transparent 60%);
+      background-size: 400px 400px;
+      z-index: -1;
+      pointer-events: none;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(400px, 400px);
+      }
+    }
+
+    .line-effect {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .line {
+      position: absolute;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      height: 1px;
+      opacity: 0.2;
+      animation: lineMove 10s linear infinite;
+    }
+
+    .line:nth-child(1) {
+      top: 20%;
+      width: 30%;
+      left: -30%;
+      animation-delay: 0s;
+    }
+
+    .line:nth-child(2) {
+      top: 40%;
+      width: 40%;
+      left: -40%;
+      animation-delay: -3s;
+      background: linear-gradient(90deg, transparent, var(--accent-2), transparent);
+    }
+
+    .line:nth-child(3) {
+      top: 60%;
+      width: 25%;
+      left: -25%;
+      animation-delay: -6s;
+      background: linear-gradient(90deg, transparent, var(--accent-3), transparent);
+    }
+
+    .line:nth-child(4) {
+      top: 80%;
+      width: 35%;
+      left: -35%;
+      animation-delay: -9s;
+    }
+
+    @keyframes lineMove {
+      0% {
+        transform: translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.2;
+      }
+      90% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateX(calc(100vw + 100%));
+        opacity: 0;
+      }
+    }
+
+    .corner-glow {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .corner-glow-tl {
+      top: 0;
+      left: 0;
+      background: radial-gradient(circle at 0% 0%, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
+    }
+
+    .corner-glow-tr {
+      top: 0;
+      right: 0;
+      background: radial-gradient(circle at 100% 0%, rgba(255, 0, 255, 0.3) 0%, transparent 70%);
+    }
+
+    .corner-glow-bl {
+      bottom: 0;
+      left: 0;
+      background: radial-gradient(circle at 0% 100%, rgba(123, 47, 247, 0.3) 0%, transparent 70%);
+    }
+
+    .corner-glow-br {
+      bottom: 0;
+      right: 0;
+      background: radial-gradient(circle at 100% 100%, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
     }
 
     a {
@@ -393,7 +578,7 @@
     }
 
     .about {
-      background: var(--bg-secondary);
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     }
 
     .about-content {
@@ -623,15 +808,117 @@
       gap: 16px;
     }
 
-    .contact-card {
+.contact-card {
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 20px;
-      background: var(--bg-primary);
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
       border-radius: var(--radius);
       border: 1px solid var(--border);
-      transition: all 0.2s;
+      transition: all 0.3s;
+      color: var(--text-primary);
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent);
+      transform: translateX(8px);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    }
+
+    .contact-card-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(123, 47, 247, 0.2));
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 1.1rem;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+    }
+
+    .contact-card h4 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-card p {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .contact-form {
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: inherit;
+      background: rgba(0, 0, 0, 0.2);
+      color: var(--text-primary);
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-status {
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      margin-top: 16px;
+      display: none;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .form-status.success {
+      background: rgba(0, 255, 136, 0.2);
+      color: #00ff88;
+      border: 1px solid #00ff88;
+      display: block;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    }
+
+    .form-status.error {
+      background: rgba(255, 0, 0, 0.2);
+      color: #ff6b6b;
+      border: 1px solid #ff6b6b;
+      display: block;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     }
 
     .contact-card:hover {
@@ -726,10 +1013,11 @@
     }
 
     footer {
-      background: var(--bg-primary);
+      background: var(--bg-secondary);
       padding: 48px 0;
       text-align: center;
       border-top: 1px solid var(--border);
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
     }
 
     footer p {
@@ -749,16 +1037,18 @@
       display: grid;
       place-items: center;
       border-radius: var(--radius-sm);
-      background: var(--bg-secondary);
-      color: var(--text-secondary);
+      background: var(--bg-card);
+      color: var(--accent);
       border: 1px solid var(--border);
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
 
     .footer-socials a:hover {
       background: var(--accent);
-      color: white;
+      color: var(--bg-primary);
       border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+      transform: translateY(-5px);
     }
 
     .reveal {
@@ -811,11 +1101,13 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--bg-secondary);
+        background: rgba(15, 15, 35, 0.98);
+        backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 20px;
         gap: 16px;
         border-bottom: 1px solid var(--border);
+        box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
       }
 
       .nav-links.open {
@@ -847,6 +1139,23 @@
   </style>
 </head>
 <body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+  <div class="bg-grid"></div>
+  <div class="grid-overlay"></div>
+  <div class="corner-glow corner-glow-tl"></div>
+  <div class="corner-glow corner-glow-tr"></div>
+  <div class="corner-glow corner-glow-bl"></div>
+  <div class="corner-glow corner-glow-br"></div>
+  <div class="line-effect">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="particles" id="particles"></div>
+
   <nav class="navbar">
     <div class="container">
       <a href="#home" class="brand"><span>Aun</span> Mustansar</a>
@@ -1128,6 +1437,20 @@
     }, { threshold: 0.1 });
 
     reveals.forEach(el => observer.observe(el));
+
+    const particlesContainer = document.getElementById("particles");
+    const particleCount = 30;
+
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement("div");
+      particle.className = "particle";
+      particle.style.left = Math.random() * 100 + "%";
+      particle.style.width = Math.random() * 4 + 2 + "px";
+      particle.style.height = particle.style.width;
+      particle.style.animationDuration = Math.random() * 20 + 10 + "s";
+      particle.style.animationDelay = Math.random() * 20 + "s";
+      particlesContainer.appendChild(particle);
+    }
 
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
